@@ -51,7 +51,7 @@ class PlayerMailman:
         Picks two skills from the list
 
         Returns:
-        list
+            list
         """
         traits_list = PlayerMailman.traits_list
         traits = ['', '']
