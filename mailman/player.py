@@ -10,7 +10,7 @@ class PlayerMailman:
     Traits - affect skills and SPECIAL
     """
 
-    special = {
+    SPECIAL = {
         'strength': 5,
         'perception': 5,
         'endurance': 5,
@@ -20,10 +20,10 @@ class PlayerMailman:
         'luck': 5
     }
 
-    skills_list = ['energy weapons', 'melee weapons', 'guns', 'barter',
+    SKILLS_LIST = ['energy weapons', 'melee weapons', 'guns', 'barter',
                    'repair', 'speech', 'explosives', 'unarmed', 'medicine']
 
-    traits_list = ['built to destroy', 'fast shot', 'four eyes',
+    TRAITS_LIST = ['built to destroy', 'fast shot', 'four eyes',
                    'good natured', 'heavy handed',
                    'kamikaze', 'loose cannon', 'small frame',
                    'trigger discipline', 'wild wasteland']
@@ -35,7 +35,7 @@ class PlayerMailman:
         Returns:
             list
         """
-        skills_list = PlayerMailman.skills_list
+        skills_list = PlayerMailman.SKILLS_LIST
         skills = ['', '', '']
         for item in skills:
             item_chosen = choice(skills_list)
@@ -53,7 +53,7 @@ class PlayerMailman:
         Returns:
             list
         """
-        traits_list = PlayerMailman.traits_list
+        traits_list = PlayerMailman.TRAITS_LIST
         traits = ['', '']
         for item in traits:
             item_chosen = choice(traits_list)
@@ -71,7 +71,7 @@ class PlayerMailman:
         Returns:
             dict
         """
-        special = PlayerMailman.special
+        special = PlayerMailman.SPECIAL
         attributes = list(special.keys())
         for item in attributes:
             special[item] = randint(1, 10)
