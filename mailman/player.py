@@ -28,6 +28,7 @@ class PlayerMailman:
                    'kamikaze', 'loose cannon', 'small frame',
                    'trigger discipline', 'wild wasteland']
 
+    @classmethod
     def skill_tag(self):
         """
         Tags three skills from the list
@@ -46,6 +47,7 @@ class PlayerMailman:
                 skills[skills.index(item)] = item_chosen
         return skills
 
+    @classmethod
     def traits_pick(self):
         """
         Picks two skills from the list
@@ -64,6 +66,7 @@ class PlayerMailman:
                 traits[traits.index(item)] = item_chosen
         return traits
 
+    @classmethod
     def assign_attributes(self):
         """
         Assigns points to SPECIAL attributes at random
