@@ -11,7 +11,15 @@ It randomly generates a build for Obsidian's Fallout: New Vegas (2010).
 The build may not always make sense (read: probably never will) but it's just a proof of concept really.
 
 ## What's in the build?
-Currently, it spits out a set of [SPECIAL] stats, a set of [skills], and a set of [traits].
+In its finished state, `courier` spits out a set of [SPECIAL] stats, a set of first-level [skills] and first-level [traits], a name, and a gender.
+
+## How do I use it?
+Easy -
+```sh
+git clone git@github.com:aburgd/courier.git
+python courier/courier.py
+```
+Simple as that!
 
 [SPECIAL]: http://fallout.wikia.com/wiki/Fallout:_New_Vegas_SPECIAL
 [skills]: http://fallout.wikia.com/wiki/Fallout:_New_Vegas_skills
