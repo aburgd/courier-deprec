@@ -18,7 +18,7 @@ def roll_check(special):
         return special
 
 
-def rerolling(valid, player_special):
+def rerolling(valid, special):
     """
     Double-checks roll_check for validity of SPECIAL.
 
@@ -26,14 +26,14 @@ def rerolling(valid, player_special):
         dict
     """
     if valid is True:
-        return player_special
+        return special
     elif valid is False:
         player = PlayerMailman()
-        player_special = player.assign_attributes()
-        return player_special
+        special = player.assign_attributes()
+        return special
 
 
-def special_validation(player_special):
+def special_validation(special):
     """
     Takes a dict of attributes and returns a boolean based
     on the sum of the attributes' keys.
@@ -41,10 +41,10 @@ def special_validation(player_special):
     Returns:
         bool
     """
-    attributes = list(player_special.keys())
+    attributes = list(special.keys())
     attr_sum = 0
     for item in attributes:
-        attr_sum += player_special[item]
+        attr_sum += special[item]
     if attr_sum > 40 or attr_sum < 40:
         return False
     elif attr_sum == 40:
