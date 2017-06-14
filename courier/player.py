@@ -1,8 +1,8 @@
 from random import randint, choice
+from elizabeth import Personal
 
 
 class PlayerCourier:
-
     """
     Defines a player Courier's base information
     SPECIAL - 7 basic stats
@@ -79,3 +79,44 @@ class PlayerCourier:
         for item in attributes:
             special[item] = randint(1, 10)
         return special
+
+    @classmethod
+    def name_gender(self):
+        """
+        Picks a random gender of two available to
+        elizabeth's name generator
+
+        Returns:
+            string
+        """
+        gender = choice(['male', 'female'])
+        return gender
+
+    @classmethod
+    def display_gender(self):
+        """
+        Picks a gender from a custom list
+        Note: not an exhaustive list of genders by any means
+
+        Returns:
+            string
+        """
+
+        gender_list = ['male', 'female', 'nonbinary', 'transman',
+                       'transwoman', 'genderfluid', 'genderqueer']
+        gender = choice(gender_list)
+        return gender
+
+    @classmethod
+    def tell_me_your_name(self, gender):
+        """
+        Uses elizabeth to generate a random name
+
+        Returns:
+            string
+        """
+        personal = Personal('en')
+        # only two genders are available to elizabeth
+        # elizabeth uses the gender to generate a name
+        full_name = personal.full_name(gender=gender)
+        return full_name
