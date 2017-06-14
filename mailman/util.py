@@ -1,4 +1,4 @@
-from player import PlayerMailman
+from player import PlayerCourier
 
 
 def roll_check(special):

@@ -1,7 +1,7 @@
 from random import randint, choice
 
 
-class PlayerMailman:
+class PlayerCourier:
 
     """
     Defines a player Courier's base information

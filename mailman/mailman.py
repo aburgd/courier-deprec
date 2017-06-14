@@ -1,8 +1,8 @@
-from player import PlayerMailman
+from player import PlayerCourier
 from util import roll_check
 
 
-mojave = PlayerMailman()
+mojave = PlayerCourier()
 mojave_special = mojave.assign_attributes()
 mojave_special = roll_check(mojave_special)
 mojave_skills = mojave.skill_tag()
