@@ -36,7 +36,7 @@ class PlayerCourier:
         Returns:
             list
         """
-        skills_list = PlayerMailman.SKILLS_LIST
+        skills_list = PlayerCourier.SKILLS_LIST
         skills = ['', '', '']
         for item in skills:
             item_chosen = choice(skills_list)
@@ -55,7 +55,7 @@ class PlayerCourier:
         Returns:
             list
         """
-        traits_list = PlayerMailman.TRAITS_LIST
+        traits_list = PlayerCourier.TRAITS_LIST
         traits = ['', '']
         for item in traits:
             item_chosen = choice(traits_list)
@@ -74,7 +74,7 @@ class PlayerCourier:
         Returns:
             dict
         """
-        special = PlayerMailman.SPECIAL
+        special = PlayerCourier.SPECIAL
         attributes = list(special.keys())
         for item in attributes:
             special[item] = randint(1, 10)

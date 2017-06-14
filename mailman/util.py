@@ -28,7 +28,7 @@ def rerolling(valid, special):
     if valid is True:
         return special
     elif valid is False:
-        player = PlayerMailman()
+        player = PlayerCourier()
         special = player.assign_attributes()
         return special
 
